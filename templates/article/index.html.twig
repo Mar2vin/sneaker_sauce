@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col md-12">
+				<h1 class="title p-1">{{ article.designation }}</h1>
+				<div class="img-fluid">
+					<img src="{{ article.image}}" alt="{{ article.designation}}">
+				</div>
+				<div class="content text-justify">
+					<p class="date">
+						Ecrit le
+						{{ article.createdAt | date("d/m/Y")}}
+						à
+						{{ article.createdAt | date("H:m")}}</p>
+					<p class="content">{{ article.content}}</p>
+
+					<a href="/">Retour</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

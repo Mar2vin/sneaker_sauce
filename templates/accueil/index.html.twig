@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="svg-container">
+		<svg viewbox="0 0 800 400" class="svg">
+			<path id="curve" fill="#444444" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z"></path>
+		</svg>
+	</div>
+
+	<header>
+		<div class="cube-3d">
+			<div class="cube">
+				<div class="side" id="front"></div>
+				<div class="side" id="bottom"></div>
+				<div class="side" id="top"></div>
+				<div class="side" id="left"></div>
+				<div class="side" id="right"></div>
+				<div class="side" id="back"></div>
+			</div>
+		</div>
+
+		<h2>Les meilleures
+			<p class="blue">sneakers
+			</p>, pour le meilleur
+			<p class="red">
+				style</p>.</h2>
+
+	</header>
+	<h2 class="display-4 text-center m-5">Dernières actualités</h2>
+	<div class="container">
+		<div class="row">
+
+			{% for article in articles %}
+
+
+				<div class="col-lg-4 col-md-6 col-sm-12 ">
+					<div class="card mb-4 shadow-sm" data-mdb-animation-start="onHover">
+						<img class="rounded" src="/assets/img/{{article.image}}" alt="{{ article.designation}}" style="width:100%; height:auto">
+						<div class="card-body">
+							<h4 class="card-title">{{ article.designation}}</h4>
+							<p class="card-text">
+								{{ article.content|u.truncate(200,'..',false)}}
+							</p>
+
+							<a href="/article/{{article.id}}" type="button" class="btn btn-outline-primary d-flex justify-content-center mb-2 ">En savoir plus</a>
+
+							<div class="card-footer bg-light">
+								<small class="text-muted">
+									<p class="date ">
+										Ecrit le
+										{{ article.createdAt | date("d/m/Y")}}
+										à
+										{{ article.createdAt | date("H:m")}}
+										par
+										{{article.author}}</p>
+								</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
