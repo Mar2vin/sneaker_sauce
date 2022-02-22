@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Permanent+Marker&display=swap");
-
 .anim {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 2%;
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", cursive;
+  font-weight: 900;
 }
 .container-anim {
   display: flex;
@@ -20,6 +19,9 @@
   transform-style: preserve-3d;
   transition: 2.5s ease-in-out;
   transition-delay: calc(0.25s * var(--j));
+}
+.container-anim .text:last-child {
+  transition: 4s ease-in-out;
 }
 .container-anim:hover .text {
   transform: rotateX(-360deg);

@@ -25,6 +25,8 @@ header {
   text-align: center;
 }
 header h2 {
+  font-family: "Poppins", cursive;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

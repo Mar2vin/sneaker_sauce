@@ -42,8 +42,8 @@ class AppFixtures extends Fixture
         $categories = [];
         for ($i = 0; $i < 15; $i++) {
             $category = new Category();
-            $category->setDesignation(join(' ', $faker->words(50)));
-            $category->setDescription(join(' ', $faker->words(50)));
+            $category->setDesignation(join(' ', $faker->words(2)));
+            $category->setDescription(join(' ', $faker->words(2)));
             $category->setImage($faker->imageUrl());
             $manager->persist($category);
             $categories[] = $category;

@@ -5,11 +5,13 @@
 .nav-item {
   cursor: pointer;
   transition: all 0.5s;
+  font-family: "Poppins", cursive;
+  font-weight: 800;
 }
 .nav-item:hover {
   text-shadow: 0 0 15px var(--main-blue-color);
   transform: scale(1.2);
-  font-weight: 800;
+  font-weight: 900;
 }
 .nav-item::after {
   content: "";
@@ -51,9 +53,9 @@
 }
 .dropdown-item:hover::after,
 .dropdown-item:focus {
-  background-color: var(--main-blue-color);
+  background-color: var(--main-red-color);
   width: 62%;
   margin-left: 20%;
-  box-shadow: 0px 0px 15px var(--main-blue-color);
+  box-shadow: 0px 0px 15px var(--main-red-color);
   transform: scale(1.5);
 }

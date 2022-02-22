@@ -23,12 +23,12 @@
   height: var(--size);
 }
 #front {
-  background: url(/assets/img/logo_sn1.jpg) no-repeat black center/contain;
+  background: url(/assets/img/logo_sn1.jpg) no-repeat white center/contain;
 
   transform: translateZ(calc(var(--size) / 2));
 }
 #top {
-  background: url(/assets/img/logo_sn1.jpg) no-repeat center/cover;
+  background: url(/assets/img/logo_sn1.jpg) no-repeat white center/contain;
   transform: rotateX(-270deg) translateY(calc(-1 * (var(--size) / 2)));
   transform-origin: top center;
 }
@@ -38,17 +38,17 @@
   transform-origin: bottom center;
 }
 #right {
-  background: url(/assets/img/logo_sn1.jpg) no-repeat black center/contain;
+  background: url(/assets/img/logo_sn1.jpg) no-repeat white center/contain;
   transform: rotateY(-270deg) translateX(calc(var(--size) / 2));
   transform-origin: top right;
 }
 #left {
-  background: url(/assets/img/logo_sn1.jpg) no-repeat black center/contain;
+  background: url(/assets/img/logo_sn1.jpg) no-repeat white center/contain;
   transform: rotateY(270deg) translateX(calc(-1 * (var(--size) / 2)));
   transform-origin: center left;
 }
 #back {
-  background: url(/assets/img/logo_sn1.jpg) no-repeat black center/contain;
+  background: url(/assets/img/logo_sn1.jpg) no-repeat white center/contain;
   transform: rotateY(-180deg) translateZ(calc(var(--size) / 2));
 }
 @keyframes move {
